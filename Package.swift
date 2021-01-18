@@ -10,7 +10,7 @@ let swiftSettings: [SwiftSetting] = [.define(webAuthFlag.name, webAuthFlag.condi
 let package = Package(
     name: "Auth0",
     platforms: [.iOS(.v9), .macOS(.v10_11), .tvOS(.v9), .watchOS(.v2)],
-    products: [.library(name: "Auth0", targets: ["Auth0"])],
+    products: [.library(name: "Auth0", type: .dynamic, targets: ["Auth0"])],
     dependencies: [
         .package(url: "https://github.com/auth0/SimpleKeychain.git", .upToNextMajor(from: "0.12.0")),
         .package(url: "https://github.com/auth0/JWTDecode.swift.git", .upToNextMajor(from: "2.5.0")),
